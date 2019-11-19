@@ -4,12 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // 引入reset.css避免多种浏览器上显示效果不一样
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 引入border.css，避免移动端1像素问题
-import './assets/styles/border.css'
+import 'styles/border.css'
 // 使用click会延迟300ms，需要引入fastclick解决次问题
 import fastClick from 'fastclick'
-import './assets/styles/iconfont.css'
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 // 加上它后移动端300ms的问题就解决了

@@ -20,12 +20,14 @@ export default {
 </script>
 /* 使用stylus写style文件，设置scoped使style仅在这个文件里生效, 不影响到其他组件 */
 <style lang="stylus" scoped>
+  /* @代表src目录，但是在style文件里使用时需要加~号 */
+  @import '~styles/varibles.styl'
   /* 1rem = html font-size = 50px, font-size在reset.css里面设置的 */
   /* 设计图给的是2x图，比如86px，因此86/2rem = 86/100，所以2x图下的86px就是.86rem */
   .header
     display: flex
     line-height: .86rem
-    background: #00bcd4
+    background: $bgColor
     color: #fff
     .header-left
       width: .64rem
