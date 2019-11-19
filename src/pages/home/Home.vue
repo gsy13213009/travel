@@ -1,13 +1,16 @@
 <template>
   <div>
-    <div>home</div>
-    <router-link to="/list" class="list">List</router-link>
+    <home-header></home-header>
   </div>
 </template>
 
 <script>
+import HomeHeader from './component/Header.vue'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeHeader
+  }
 }
 </script>
 
