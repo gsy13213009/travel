@@ -1,5 +1,8 @@
 <template>
-  <div>home</div>
+  <div>
+    <div>home</div>
+    <router-link to="/list" class="list">List</router-link>
+  </div>
 </template>
 
 <script>
@@ -9,5 +12,8 @@ export default {
 </script>
 
 <style>
+.list {
+  font-size: 30px
+}
 
 </style>
