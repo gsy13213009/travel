@@ -10,10 +10,13 @@ import 'styles/border.css'
 // 使用click会延迟300ms，需要引入fastclick解决次问题
 import fastClick from 'fastclick'
 import 'styles/iconfont.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 // 加上它后移动端300ms的问题就解决了
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
