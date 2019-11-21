@@ -10,6 +10,7 @@ import 'styles/border.css'
 // 使用click会延迟300ms，需要引入fastclick解决次问题
 import fastClick from 'fastclick'
 import 'styles/iconfont.css'
+// 使用swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
