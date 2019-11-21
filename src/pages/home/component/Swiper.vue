@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperoption">
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+    <swiper :options="swiperOption">
+      <!-- 使用wrapper，避免图片把pagination撑没了 -->
+      <swiper-slide v-for="item of swiperList" :key="item.id" class="wrapper">
         <img class="swiper-img" :src="item.url"/>
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
