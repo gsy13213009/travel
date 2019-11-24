@@ -4,7 +4,7 @@
       <swiper-slide v-for="page of pages" class="wrapper">
         <div class="icon" v-for="item of page">
           <div class="icon-img">
-            <img class="icon-img-content" :src="item.url" />
+            <img class="icon-img-content" :src="item.imgUrl" />
           </div>
           <p class="icon-desc">{{item.desc}}</p>
         </div>
@@ -20,7 +20,7 @@ export default {
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         // 前8个放在page[0]里面
         const page = Math.floor(index / 8)
         if (!pages[page]) {
@@ -31,49 +31,14 @@ export default {
       return pages
     },
   },
+  props: {
+    list: Array
+  },
   data: function () {
     return {
       swiperOption: {
         autoplay: false
       },
-      iconList: [
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点哈哈哈哈哈哈哈"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          desc: "热门景点"
-        },
-      ]
     }
   }
 }

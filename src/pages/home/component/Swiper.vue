@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- 使用wrapper，避免图片把pagination撑没了 -->
-      <swiper-slide v-for="item of swiperList" :key="item.id" class="wrapper">
-        <img class="swiper-img" :src="item.url"/>
+      <swiper-slide v-for="item of list" :key="item.id" class="wrapper">
+        <img class="swiper-img" :src="item.imgUrl"/>
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -13,22 +13,20 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
       },
-      swiperList: [
-        {
-          id: '0001',
-          url: 'http://www.zgjyjn.net/uploadfile/2019/0712/20190712085727940.jpg'
-        },
-        {
-          id: '0002',
-          url: 'http://www.zgjyjn.net/uploadfile/2019/0712/20190712090347713.jpg'
-        },
-      ]
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }

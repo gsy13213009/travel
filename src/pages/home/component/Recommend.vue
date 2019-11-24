@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="title">热销推荐</div>
-    <div class="item" v-for="item of recommendlist">
-      <img :src="item.url" class="item-img"/>
+    <div class="item" v-for="data of list">
+      <img :src="data.imgUrl" class="item-img"/>
       <div class="item-info">
-        <p class="item-title">{{item.title}}</p>
-        <p class="item-desc">{{item.subtitle}}</p>
+        <p class="item-title">{{data.title}}</p>
+        <p class="item-desc">{{data.desc}}</p>
         <button class="item-button">查看详情</button>
       </div>
     </div>
@@ -15,37 +15,9 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendlist: [
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          title: "大连森林动物园",
-          subtitle: "与动物嬉戏，共享和谐人生哈哈哈哈哈哈哈哈哈付大或或接口：接口：",
-          price: "￥65"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          title: "大连森林动物园",
-          subtitle: "与动物嬉戏，共享和谐人生",
-          price: "￥65"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          title: "大连森林动物园",
-          subtitle: "与动物嬉戏，共享和谐人生",
-          price: "￥65"
-        },
-        {
-          url: "http://www.zgjyjn.net/uploadfile/2014/0511/thumb_104_134_20140511105236409.jpg",
-          title: "大连森林动物园",
-          subtitle: "与动物嬉戏，共享和谐人生",
-          price: "￥65"
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
-
 }
 </script>
 
