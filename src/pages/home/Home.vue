@@ -45,7 +45,7 @@ export default {
         this.city = data.city
         this.swiperList = data.swiperList
         this.iconList = data.iconList
-        this.recommendList = recommendList
+        this.recommendList = data.recommendList
       }
       console.log(res)
     }
